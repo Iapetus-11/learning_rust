@@ -4,6 +4,9 @@ mod fibonacci;
 mod look_and_say;
 mod valid_parentheses;
 mod collatz;
+mod tcp_chat_server;
+mod tcp_chat_client;
+mod tcp_chat_utils;
 
 fn main() {
     let run = env::args().nth(1).expect("Specify the name of the file to run the test function of");
@@ -16,5 +19,9 @@ fn main() {
         valid_parentheses::test();
     } else if run == "collatz" {
         collatz::test();
+    } else if run == "tcp_chat_server" {
+        tcp_chat_server::test();
+    } else if run == "tcp_chat_client" {
+        tcp_chat_client::test();
     }
 }
